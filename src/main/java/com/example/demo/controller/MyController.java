@@ -72,7 +72,7 @@ public String doLogin(@RequestBody com.example.demo.payload.LoginRequest loginRe
                 loginRequest.getUsername(),loginRequest.getPassword()
         ));
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        return "Log in Success!!!";
+        return "Log in Successfull!!!";
     }
 
     @RequestMapping(value="/logout", method=RequestMethod.GET)
