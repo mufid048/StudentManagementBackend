@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Student;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 @RestController
+@CrossOrigin(origins="https://app-dummy123.herokuapp.com")
 public class MyController {
 
 //    List<Student> students = new ArrayList<>(
