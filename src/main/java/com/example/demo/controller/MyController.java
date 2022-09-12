@@ -14,6 +14,10 @@ import java.util.Optional;
 @CrossOrigin(origins="http://localhost:3000")
 public class MyController {
     studentRepository studentrepository;
+    @GetMapping
+    public String displayWelcomeMessage(){
+        return "<center><h1>Welcome to the Spring Boot Security!!!!</h1></center>";
+    }
     @Autowired
     @GetMapping("/listStudents")
     public List<Student> getAllStudents() {
