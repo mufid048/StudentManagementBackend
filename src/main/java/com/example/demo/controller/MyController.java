@@ -66,6 +66,14 @@ public String doLogin(@RequestBody com.example.demo.payload.LoginRequest loginRe
     SecurityContextHolder.getContext().setAuthentication(authentication);
     return "Login Successful";
 }
+    @PostMapping("/login")
+    public String doLogin(@RequestBody LoginRequest loginRequest){
+        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+                loginRequest.getUsername(),loginRequest.getPassword()
+        ));
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        return "Log in Success!!!";
+    }
 
     @RequestMapping(value="/logout", method=RequestMethod.GET)
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
